@@ -1,0 +1,18 @@
+<h1>signup</h1>
+<div class="container">
+<form action="/admin/adminSignup/signup" method="post">
+{{#if Error}}
+<h6 class="error text-danger">{{Error}}</h6>
+{{/if}}
+    <label for="">Admin Name</label>
+    <input type="text" name="name" placeholder="Admin name"><br><br>
+
+    <label for="">Admin email</label>
+    <input type="email" name="email" id="email" placeholder="Admin userid"><br><br>
+
+    <label for="">Admin password</label>
+    <input type="password" name="password"placeholder="Admin password" id="pass"><br><br>
+
+    <a href="/admin/login">Admin login</a><br><br>
+    <button type="submit">Admin signup</button>
+</form></div>

@@ -1,0 +1,15 @@
+<h1>Edit userdata of {{userData.name}}</h1>
+
+<form action="/admin/edit-user" method="post" class="form-control">
+   <label for="">First Name</label>
+   <input type="text" name="fname" value="{{userData.name}}" id="" placeholder="fisrt name"><br><br>
+   <label for="">Second Name</label>
+   <input type="text" name="sname" placeholder="second name" required><br><br>
+   <label for="">Email</label>
+   <input type="email" name="email" value="{{userData.email}}" id="" readonly><br><br>
+   <label>Age</label>
+   <input type="number" name="age" id="" placeholder="age" required><br><br>
+   <input type="text" name="id" value="{{userData._id}}" hidden>
+
+   <button type="submit" class="btn btn-success">Edit</button>
+</form>

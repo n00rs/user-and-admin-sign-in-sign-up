@@ -1,0 +1,39 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Admin {{admin.name}}</a>
+    <a class="nav-link btn text-danger me-3 ms-auto" href="admin/logout" class="">logout</a>
+  </nav>
+</header>
+<section>
+  <div class="row col-md-2 ms-auto mt-2">
+    <a href="admin/add-user" class="btn btn-outline-primary">Add user</a>
+  </div>
+  <table class="table mt-3 bg-light">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">1st Name</th>
+        <th scope="col">Sec Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each users}}
+      <tr>
+        <th scope="row">*</th>
+        <td>{{this.name}}</td>
+        <td>{{this.sname}}</td>
+        <td>{{this.age}}</td>
+        <td>{{this.email}}</td>
+        <td>
+          <a href="admin/edit-user/{{this._id}}" class="btn btn-outline-primary">Edit</a>
+          <a href="admin/delete-user?id={{this._id}}" onclick="return confirm('do you wanna delete {{this.name}}')"
+            class="btn btn-outline-danger">Delete</a>
+        </td>
+      </tr>
+      {{/each}}
+      </tr>
+    </tbody>
+  </table>
+</section>

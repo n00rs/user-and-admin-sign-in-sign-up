@@ -1,0 +1,14 @@
+<h1>Add user</h1>
+
+<form action="/admin/add-user" method="POST">
+    {{#if emailError}}
+    <p class="error text-danger">{{emailError}}</p>
+    {{/if}}
+    <label for="">Name</label>
+    <input type="text" name="name" id="name" placeholder="Name"><br><br>
+    <label for="">email</label>
+    <input type="email" name="email" id="email" placeholder="E-mail"><br><br>
+    <label for="">password</label>
+    <input type="password" name="password" id="pasword" placeholder="password"><br><br>
+    <button type="submit" class="btn btn-success" id="btn">ADD</button>
+</form>

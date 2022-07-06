@@ -1,0 +1,12 @@
+<h1>login</h1><br><br>
+
+<form action="/login" method="post">
+    {{#if loginError}}
+    <p class="error text-danger">{{loginError}}</p>
+    {{/if}}
+
+    <input type="email" name="email" id="email" placeholder="E-mail"><br><br>
+    <input type="password" name="password" id="password" placeholder="password"><br><br>
+    <a href="/signup">Create Account </a><br><br>
+    <button type="submit">login</button>
+</form>

@@ -1,0 +1,19 @@
+<h1>signup</h1>
+
+
+
+<form action="/signup/submit" method="POST">
+    {{#if emailError}}
+    <p class="error text-danger">{{emailError}}</p>
+    {{/if}}
+
+    <label for="">Name</label>
+    <input type="text" name="name" id="name" placeholder="Name"><br><br>
+    <label for="">email</label>
+    <input type="email" name="email" id="email" placeholder="E-mail"><br><br>
+    <label for="">password</label>
+    <input type="password" name="password" id="pasword" placeholder="password"><br><br>
+    <a href="/">Already have an account</a><br><br>
+    <button type="submit" id="btn">signup</button>
+
+</form>

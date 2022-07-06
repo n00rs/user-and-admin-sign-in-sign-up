@@ -1,0 +1,14 @@
+<h1>admin</h1>
+<br><br>
+<form action="/admin/login/login" method="post">
+    {{#if Error}}
+    <h6 class="error text-danger"> {{Error}}</h6>
+    {{/if}}
+    <label for="">Admin Id</label>
+    <input type="email" name="email" id="" placeholder="AdminId"><br><br>
+
+    <label for="">Admin Password</label>
+    <input type="password" name="password" id="" placeholder="Password"> <br><br>
+
+    <button type="submit" onclick="return confirm('you are admin')"> login</button>
+</form>
